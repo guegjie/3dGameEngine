@@ -3,9 +3,9 @@ import tkinter; import time; import keyboard
 class Window(tkinter.Tk):
     def __init__(self, size=[480, 480], focalLength=1):
         super().__init__()
-        self.overrideredirect(True)
         self.Canvas = tkinter.Canvas(self, width=size[0], height=size[1], background="black")
         self.Canvas.pack()
+        self.state("zoomed")
         self.resizable(False, False)
         self.focalLength = focalLength
         self.size = size
